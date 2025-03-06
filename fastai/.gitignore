@@ -1,0 +1,14 @@
+# folders
+
+__pycache__/
+fastai/
+fastbook/
+media/
+flagged/
+saved/
+bears/
+
+# files
+
+*.pkl
+*.pth
