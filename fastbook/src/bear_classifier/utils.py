@@ -1,14 +1,6 @@
-# custom search_images_bing() function from
-# https://forums.fast.ai/t/getting-more-than-150-images-using-search-images-bing/77947/11
-
-# pip install azure-cognitiveservices-search-imagesearch
-
 import requests
 from itertools import chain
 from fastcore.foundation import L
-
-#from azure.cognitiveservices.search.imagesearch import ImageSearchClient as api
-#from msrest.authentication import CognitiveServicesCredentials as auth
 
 def search_images_bing(key, term, total_count=150, min_sz=224):
     

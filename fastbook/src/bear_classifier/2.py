@@ -13,6 +13,8 @@ model_path = Path(__file__).resolve().parent/'..'/'..'/'models'
 key = os.environ['AZURE_SEARCH_KEY']
 bear_types= 'grizzly', 'black', 'teddy'
 
+# download images from a bing search if there is no training set 
+# (requires an azure search api key)
 i = 0
 if not data_path.exists():
 	data_path.mkdir()
@@ -27,13 +29,13 @@ if not data_path.exists():
 # collect all images in a single list
 fns = get_image_files(data_path)
 
-#verify whether any images are corrupted
+# verify whether any images are corrupted
 failed = L()
 for o in fns:
 	if verify_images(o) == False:
 		failed.append(o)
 
-#remove failed images by unlinking them from the Path object
+# remove failed images by unlinking them from the Path object
 failed.map(Path.unlink)
 
 ###########

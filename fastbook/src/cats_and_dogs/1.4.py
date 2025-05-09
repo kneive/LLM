@@ -1,4 +1,4 @@
-# classifier for cats and dogs
+# image classifier for cats and dogs trained on the Oxford-IIIT Pet Dataset
 
 from fastai.vision.all import *
 
@@ -22,7 +22,9 @@ learn.fine_tune
 
 categories = ('Dog', 'Cat')
 
-# test image
+##############
+# test image #
+##############
 
 im = PILImage.create('/test_images/gadse1.jpg')
 im.thumbnail((224, 224))

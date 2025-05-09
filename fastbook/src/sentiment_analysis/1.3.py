@@ -1,4 +1,4 @@
-# pytorch
+# sentiment analysis with pytorch
 
 # using pipeline
 
@@ -24,7 +24,7 @@ print(res)
  {'label': 'POSITIVE', 'score': 0.9998615980148315}]
 """
 
-### applying the pipeline separately
+# applying the pipeline separately
 
 batch = tokenizer(X_train, 
                   padding=True, 
@@ -44,7 +44,7 @@ print(batch)
 """
 
 with torch.no_grad():                               
-    outputs = model(**batch)                        #calls the model and unpacks the batch (dictionary)
+    outputs = model(**batch)    #calls the model and unpacks the batch (dictionary)
     print(outputs)
 
     """ Output
@@ -55,7 +55,7 @@ with torch.no_grad():
                          attentions=None)
     """
 
-    predictions = F.softmax(outputs.logits, dim=1)  #returns the predictions
+    predictions = F.softmax(outputs.logits, dim=1)
     print(predictions)
     
     """ Output
@@ -63,7 +63,7 @@ with torch.no_grad():
             [1.3835e-04, 9.9986e-01]]) 
     """
     
-    labels = torch.argmax(predictions, dim=1)       #returns the labels
+    labels = torch.argmax(predictions, dim=1)
     print(labels)
 
     """ Output

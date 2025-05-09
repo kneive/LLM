@@ -1,3 +1,5 @@
+# segmentation model trained on a subset of the CamVid dataset
+
 from fastai.vision.all import *
 from pathlib import Path
 

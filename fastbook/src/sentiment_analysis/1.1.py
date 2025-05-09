@@ -1,8 +1,4 @@
-# if necessary !pip install transformers 
-# and https://pytorch.org/get-started/locally/
-#
 # sentiment analysis without specifying models
-
 
 from transformers import pipeline
 

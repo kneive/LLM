@@ -1,3 +1,5 @@
+# model predicting movie ratings based on the MovieLens dataset using a collab dataloader 
+
 from fastai.collab import *
 from pathlib import Path
 

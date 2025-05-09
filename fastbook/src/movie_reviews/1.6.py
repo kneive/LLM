@@ -1,3 +1,5 @@
+# classifier for movie reviews using an IMDB dataset 
+
 from fastai.text.data import *
 from fastai.text.learner import *
 from fastai.text.models import *
