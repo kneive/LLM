@@ -57,8 +57,6 @@ bears = DataBlock(blocks=(ImageBlock, CategoryBlock),
 				  get_y=parent_label,
 				  item_tfms=Resize(128))
 
-
-
 bears = bears.new(item_tfms=RandomResizedCrop(224, min_scale=0.5),
 				  batch_tfms=aug_transforms())
 dls = bears.dataloaders(data_path)
