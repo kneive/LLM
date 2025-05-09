@@ -1,0 +1,8 @@
+# nothing of interest here
+
+media/
+models/
+notes/
+training_sets/
+
+.python-version
