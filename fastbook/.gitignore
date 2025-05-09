@@ -4,5 +4,6 @@ media/
 models/
 notes/
 training_sets/
+__pycache__/
 
 .python-version
