@@ -7,13 +7,14 @@ from pathlib import Path
 
 model_path = Path(__file__).resolve().parent/'..'/'..'/'models'
 
-dls = TextDataLoaders.from_folder(untar_data(URLs.IMDB), 
-								  valid='test')
+dls = TextDataLoaders.from_folder(untar_data(URLs.IMDB),
+                                  valid='test')
 
-learn=text_classifier_learner(dls, 
-							  AWD_LSTM, 
-							  drop_mult=0.5, 
-							  metrics=accuracy)
+learn=text_classifier_learner(dls,
+                              AWD_LSTM,
+                              drop_mult=0.5,
+                              metrics=accuracy)
+
 
 learn.path = model_path
 learn.fine_tune(4, 1e-2)
